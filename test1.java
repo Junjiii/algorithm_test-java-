@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
+// < 문자역 섞기 >
 public class test1 {
     public static String main(String str1, String str2) {
         String[] arr1 = str1.split("");
