@@ -1,3 +1,5 @@
+package test1_10;
+
 public class test6 {
     public int main(int number, int n, int m) {
         int num1 = Math.floorMod(number,n);

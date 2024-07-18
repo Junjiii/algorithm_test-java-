@@ -1,3 +1,5 @@
+package test1_10;
+
 import java.util.Map;
 import java.util.function.BiFunction;
 

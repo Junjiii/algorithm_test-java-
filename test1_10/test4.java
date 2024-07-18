@@ -1,3 +1,5 @@
+package test1_10;
+
 public class test4 {
     public int main(int a, int b) {
         int num1 = Integer.parseInt(Integer.toString(a) + Integer.toString(b));

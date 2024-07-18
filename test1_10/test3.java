@@ -1,3 +1,5 @@
+package test1_10;
+
 public class test3 {
 
     public String main(String my_string, int k) {

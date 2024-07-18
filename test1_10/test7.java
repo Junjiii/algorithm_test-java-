@@ -1,3 +1,5 @@
+package test1_10;
+
 public class test7 {
     public int main(int n) {
         int result = 0;

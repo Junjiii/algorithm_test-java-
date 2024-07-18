@@ -1,3 +1,5 @@
+package test1_10;
+
 public class test5 {
     public int main(int num, int n) {
         return Math.floorMod(num,n) == 0 ? 1 : 0 ;
