@@ -3,6 +3,7 @@ package test1_10;
 import java.util.Map;
 import java.util.function.BiFunction;
 
+//  Day4 - 조건 문자열
 public class test8 {
     public int main(String ineq, String eq, int n, int m) {
         if(eq.equals("=") && n == m ) return 1;
