@@ -15,6 +15,7 @@ public class test11 {
         return IntStream.range(0, included.length).map(idx -> included[idx]?a+(idx*d):0).sum();
     }
 
+    // 속도면에서는 solution2 가 더 빠름
     public int solution2(int a, int d, boolean[] included) {
         int answer = 0;
 
