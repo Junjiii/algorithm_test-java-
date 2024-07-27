@@ -25,26 +25,36 @@ public class test16 {
     public int solution1(int n, String control) {
         int answer = n;
 
-        for(char ch : control.toCharArray()) {
-            switch(ch) {
-                case 'w': answer += 1; break;
-                case 's': answer -= 1; break;
-                case 'd': answer += 10; break;
-                case 'a': answer -= 10; break;
-                default:break;
+        for (char ch : control.toCharArray()) {
+            switch (ch) {
+                case 'w':
+                    answer += 1;
+                    break;
+                case 's':
+                    answer -= 1;
+                    break;
+                case 'd':
+                    answer += 10;
+                    break;
+                case 'a':
+                    answer -= 10;
+                    break;
+                default:
+                    break;
             }
         }
 
         return answer;
+    }
 
     public int solution2(int n, String control) {
         return control.chars().reduce(n, (acc, c) -> acc + (c == 'w' ? 1 : c == 's' ? -1 : c == 'd' ? 10 : -10));
     }
 
-        public int solution3(int n, String control) {
-            for(char c : control.toCharArray()){
-                n += c == 'w' ? 1 : c == 's' ? -1 : c == 'd' ? 10 : -10;
-            }
-            return n;
+    public int solution3(int n, String control) {
+        for(char c : control.toCharArray()){
+            n += c == 'w' ? 1 : c == 's' ? -1 : c == 'd' ? 10 : -10;
         }
+        return n;
+    }
 }
