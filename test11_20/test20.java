@@ -3,6 +3,7 @@ package test11_20;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class test20 {
 
@@ -20,4 +21,12 @@ public class test20 {
 
         return arr;
     }
+
+    public int[] solution1(int[] num_list) {
+        return IntStream.iterate(0, i -> i + 1)
+                .limit(num_list.length + 1)
+                .map(i -> i == num_list.length ? (num_list[i - 1] > num_list[i - 2] ? num_list[i - 1] - num_list[i - 2] : 2 * num_list[i - 1]) : num_list[i])
+                .toArray();
+    }
+
 }
