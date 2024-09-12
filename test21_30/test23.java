@@ -1,6 +1,7 @@
 package test21_30;
 
 import java.util.ArrayList;
+import java.util.stream.IntStream;
 
 public class test23 {
     public static void main(String[] args) {
@@ -29,5 +30,13 @@ public class test23 {
         }
 
         return arr;
+    }
+
+
+    public int[] solution2(int n) {
+        return IntStream.concat(
+                        IntStream.iterate(n, i -> i > 1, i -> i % 2 == 0 ? i / 2 : i * 3 + 1),
+                        IntStream.of(1))
+                .toArray();
     }
 }
