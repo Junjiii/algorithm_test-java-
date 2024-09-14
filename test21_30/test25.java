@@ -28,7 +28,7 @@ public class test25 {
         return sb.toString();
     }
 
-    public String solution(String myString, int[] indexList) {
+    public String solution3(String myString, int[] indexList) {
         return Arrays.stream(indexList).mapToObj(operand -> String.valueOf(myString.charAt(operand))).collect(Collectors.joining());
     }
 
