@@ -15,4 +15,14 @@ public class test28 {
 
         return result.toString();
     }
+
+    public String solution2(String[] my_strings, int[][] parts) {
+        String answer = "";
+
+        for(int i = 0; i < parts.length; i ++){
+            answer += my_strings[i].substring(parts[i][0], parts[i][1] + 1);
+        }
+
+        return answer;
+    }
 }
