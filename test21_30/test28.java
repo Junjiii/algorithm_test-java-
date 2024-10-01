@@ -2,6 +2,8 @@ package test21_30;
 
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class test28 {
     public String solution(String[] my_strings, int[][] parts) {
@@ -24,5 +26,11 @@ public class test28 {
         }
 
         return answer;
+    }
+
+
+    // collect(Collectors.joining())  사용해보기
+    public String solution3(String[] myStrings, int[][] parts) {
+        return IntStream.range(0, myStrings.length).mapToObj(i -> myStrings[i].substring(parts[i][0], parts[i][1] + 1)).collect(Collectors.joining());
     }
 }
