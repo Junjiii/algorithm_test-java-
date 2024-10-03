@@ -10,4 +10,8 @@ public class test29 {
         IntStream.range(0,my_string.length()).forEach(i -> result.add(my_string.substring(i,length)));
         return result.stream().sorted().toArray(String[]::new);
     }
+
+    public String[] solution2(String myString) {
+        return IntStream.range(0, myString.length()).mapToObj(myString::substring).sorted().toArray(String[]::new);
+    }
 }
