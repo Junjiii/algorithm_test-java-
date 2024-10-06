@@ -14,4 +14,21 @@ public class test31 {
         answer.reverse();
         return my_string.substring(0, s) + answer + my_string.substring(e + 1);
     }
+
+    public String solution3(String my_string, int s, int e) {
+
+        char[] spell = my_string.toCharArray();
+
+        for (int i = s; i < e; i++, e--) {
+            char tmp = spell[i];
+            spell[i] = spell[e];
+            spell[e] = tmp;
+        }
+
+        String answer = "";
+        for (char c : spell) {
+            answer += c;
+        }
+        return answer;
+    }
 }
