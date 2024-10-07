@@ -25,4 +25,13 @@ public class test32 {
         }
         return answer;
     }
+
+    public int[] solution3(String my_string) {
+        int[] answer = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+
+        for(char ch: my_string.toCharArray()) {
+            answer[ch - 'A' - (Character.isLowerCase(ch)?6:0)]++;
+        }
+        return answer;
+    }
 }
