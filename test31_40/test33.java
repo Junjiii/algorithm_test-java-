@@ -17,4 +17,10 @@ public class test33 {
         }
         return answer;
     }
+
+    public String solution2(String my_string, int[] indices) {
+        String[] str = my_string.split("");
+        for (int i=0;i<indices.length;i++) str[indices[i]] = "";
+        return String.join("",str);
+    }
 }
